@@ -1,0 +1,25 @@
+# EPPIN (SPINLW1; UniProt O95925) cyclic peptide binder
+# Protocol: peptide-anything
+
+entities:
+  - file:
+      path: data/targets/eppin_af.cif
+      include:
+        - chain: { id: A, res_index: 1..133 }
+      binding_types:
+        - chain: { id: A, binding: 71..133 }
+        - chain: { id: A, not_binding: 1..20 }
+      structure_groups:
+        - group: { id: DOMAIN, res_index: 21..133, visibility: 0 }
+
+  - protein:
+      id: P
+      length: 16
+      fixed_positions:
+        - { pos: 6,  aa: C }
+        - { pos: 13, aa: C }
+
+constraints:
+  - bond:
+      atom1: [P, 6, SG]
+      atom2: [P, 13, SG]
