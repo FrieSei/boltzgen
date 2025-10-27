@@ -10,7 +10,8 @@ entities:
         - chain: { id: A, binding: 71..133 }
         - chain: { id: A, not_binding: 1..20 }
       structure_groups:
-        - group: { id: DOMAIN, res_index: 71..133, visibility: 0 }
+        - group: { id: A, visibility: 1 }
+        - group: { id: A, res_index: 71..133, visibility: 0 }
 
   - protein:
       id: P
