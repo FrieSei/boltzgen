@@ -1,0 +1,39 @@
+# SUCNR1 ECL antagonist (cyclic peptide)
+# Protocol: peptide-anything
+# Indexing uses UniProt/label_seq_id (GPCRdb segments).
+
+entities:
+  - file:
+      path: ../data/targets/sucnr1_af.cif
+      include:
+        - chain:
+            id: A
+            # N-term/ECLs only
+            res_index: 82..90,160..179,260..269,1..20
+      binding_types:
+        - chain:
+            id: A
+            # ECL2/ECL3 crest
+            binding: 166..176,262..268
+        - chain:
+            id: A
+            # Exclude TM1–TM7 to nudge extracellular binding
+            not_binding: 21..49,58..81,91..121,130..159,180..211,221..249,270..292
+      structure_groups:
+        - group:
+            id: A
+            visibility: 1
+        - group:
+            id: A
+            res_index: 82..90,160..179,260..269,1..20
+            visibility: 0   # leave N-term/ECLs flexible
+
+  - protein:
+      id: P
+      # 16-mer with disulfide between positions 6 and 13
+      sequence: 5C6C3
+
+constraints:
+  - bond:
+      atom1: [P, 6, SG]
+      atom2: [P, 13, SG]

@@ -1,0 +1,8 @@
+.git
+BoltzGen/.conda_bg
+BoltzGen/.miniforge
+BoltzGen/.venv
+BoltzGen/cache
+BoltzGen/work
+__pycache__
+*.pyc

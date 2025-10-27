@@ -1,0 +1,13 @@
+# Ignore local environments and caches
+BoltzGen/cache/
+BoltzGen/work/
+BoltzGen/.conda_bg/
+BoltzGen/.miniforge/
+BoltzGen/.venv/
+.cache_mpl/
+.claude/
+
+# macOS artifacts
+.DS_Store
+BoltzGen/.DS_Store
+
