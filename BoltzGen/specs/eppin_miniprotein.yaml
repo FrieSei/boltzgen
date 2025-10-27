@@ -14,10 +14,8 @@ entities:
 
   - protein:
       id: P
-      length: 16
-      fixed_positions:
-        - { pos: 6,  aa: C }
-        - { pos: 13, aa: C }
+      # 16-mer with cysteines at positions 6 and 13
+      sequence: 5C6C3
 
 constraints:
   - bond:
