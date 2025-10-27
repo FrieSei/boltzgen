@@ -9,12 +9,12 @@ entities:
         - chain:
             id: A
             # N-term/ECLs only
-            res_index: 82..90,160..179,260..269,1..20
+            res_index: 81..91,160..181,260..269,1..20
       binding_types:
         - chain:
             id: A
-            # ECL2/ECL3 crest
-            binding: 166..176,262..268
+            # ECL windows from Mol* selection
+            binding: 81..91,160..181,260..269
         - chain:
             id: A
             # Exclude TM1–TM7 to nudge extracellular binding
@@ -25,7 +25,7 @@ entities:
             visibility: 1
         - group:
             id: A
-            res_index: 82..90,160..179,260..269,1..20
+            res_index: 81..91,160..181,260..269,1..20
             visibility: 0   # leave N-term/ECLs flexible
 
   - protein:
