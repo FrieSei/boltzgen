@@ -1,5 +1,5 @@
-# EPPIN (SPINLW1; UniProt O95925) miniprotein binder
-# Protocol: protein-anything
+# EPPIN (SPINLW1; UniProt O95925) disulfide-stapled peptide binder
+# Protocol: peptide-anything
 
 entities:
   - file:
@@ -14,5 +14,10 @@ entities:
             binding: 34..48,67..79,96..112
 
   - protein:
-      id: B
-      sequence: 80..120   # miniprotein length range
+      id: P
+      sequence: 7..9C6C3   # ~16–22 aa with Cys at positions 8 and 15
+
+constraints:
+  - bond:
+      atom1: [P, 8, SG]
+      atom2: [P, 15, SG]
